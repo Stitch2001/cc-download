@@ -47,39 +47,6 @@ const socialLinks = [
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [showPopover, setShowPopover] = useState<string | null>(null);
-  const [popoverPosition, setPopoverPosition] = useState({ top: 0, left: 0 });
-
-  const handlePopoverOpen = (qrcode: string, event: React.MouseEvent) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const popoverWidth = 164; // 150px + 16px padding
-    const popoverHeight = 164; // 150px + 16px padding
-
-    let left = rect.left + window.scrollX;
-    let top = rect.bottom + window.scrollY + 8;
-
-    // 确保不超出右边界
-    if (left + popoverWidth > window.innerWidth + window.scrollX) {
-      left = window.innerWidth + window.scrollX - popoverWidth;
-    }
-
-    // 确保不超出左边界
-    if (left < window.scrollX) {
-      left = window.scrollX;
-    }
-
-    // 检查是否会超出底部边界，如果会就显示在上方
-    if (top + popoverHeight > window.innerHeight + window.scrollY) {
-      top = rect.top + window.scrollY - popoverHeight - 8;
-    }
-
-    setPopoverPosition({ top, left });
-    setShowPopover(qrcode);
-  };
-
-  const handlePopoverClose = () => {
-    setShowPopover(null);
-  };
 
   return (
     <footer
@@ -92,9 +59,9 @@ const Footer = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
           {/* 品牌介绍部分 */}
-          <div className="col-span-1">
+          <div className="col-span-1 md:col-span-2">
             <div className="mb-3">
               <h6 className="text-xl font-semibold tracking-[-0.01em] text-foreground mb-1">
                 地鼠的编程笔记
@@ -117,8 +84,6 @@ const Footer = () => {
                     </Link>
                   ) : (
                     <div
-                      onMouseEnter={(e) => handlePopoverOpen(link.qrcode || '', e)}
-                      onMouseLeave={handlePopoverClose}
                       className="text-gray-600 w-9 h-9 flex items-center justify-center rounded-full border border-[rgba(0,0,0,0.1)] transition-all duration-200 cursor-pointer hover:transform hover:-translate-y-1 hover:text-primary-main hover:border-primary-main hover:bg-primary-light/10"
                     >
                       {link.icon}
@@ -128,24 +93,7 @@ const Footer = () => {
               ))}
             </div>
 
-            {/* Popover - 使用 fixed 定位 */}
-            {showPopover && (
-              <div
-                className="fixed p-2 bg-white rounded-lg shadow-xl border border-[rgba(0,0,0,0.08)] pointer-events-none z-[9999]"
-                style={{
-                  top: `${popoverPosition.top}px`,
-                  left: `${popoverPosition.left}px`,
-                }}
-                onMouseLeave={handlePopoverClose}
-              >
-                <img
-                  src={showPopover}
-                  alt="QR Code"
-                  className="w-[150px] h-[150px] object-contain rounded"
-                />
-              </div>
-            )}
-
+    
             <p className="text-xs text-gray-600 opacity-80">
               &copy; {currentYear} 地鼠。保留所有权利。
             </p>
@@ -156,7 +104,7 @@ const Footer = () => {
             <h6 className="text-xl font-semibold tracking-[-0.01em] text-foreground mb-3">
               快速链接
             </h6>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-5">
               {quickLinks.map((link, index) => (
                 <Link
                   key={index}
@@ -174,7 +122,7 @@ const Footer = () => {
             <h6 className="text-xl font-semibold tracking-[-0.01em] text-foreground mb-3">
               联系我
             </h6>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-5">
               <Link
                 href="mailto:dstech01@163.com"
                 className="text-gray-600 no-underline flex items-center gap-1 transition-all duration-200 hover:text-primary-main"
@@ -224,23 +172,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* 分割线 */}
-        <div className="my-5 border-t border-[rgba(0,0,0,0.07)]"></div>
-
-        {/* ICP 备案信息 */}
-        <div className="text-center">
-          <p className="text-xs text-gray-600 opacity-60">
-            <Link
-              href="https://beian.miit.gov.cn/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-inherit no-underline hover:underline"
-            >
-              粤ICP备2025395881号-2
-            </Link>
-          </p>
         </div>
-      </div>
     </footer>
   );
 };

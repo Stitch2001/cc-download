@@ -63,7 +63,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link
-              href="/"
+              href="https://dishu.tech"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xl font-semibold tracking-tight text-gray-900 hover:text-[#587b70] transition-colors duration-200"
             >
               地鼠的编程笔记
