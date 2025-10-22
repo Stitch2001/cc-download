@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- 地鼠身体 -->
+  <ellipse cx="256" cy="270" rx="160" ry="140" fill="#FF9800" />
+  <!-- 头部 -->
+  <circle cx="256" cy="170" r="90" fill="#FF9800" />
+  <!-- 耳朵 -->
+  <ellipse cx="196" cy="110" rx="25" ry="35" fill="#FF9800" transform="rotate(-20 196 110)" />
+  <ellipse cx="316" cy="110" rx="25" ry="35" fill="#FF9800" transform="rotate(20 316 110)" />
+  <!-- 眼睛 -->
+  <circle cx="220" cy="150" r="20" fill="white" />
+  <circle cx="292" cy="150" r="20" fill="white" />
+  <circle cx="220" cy="150" r="10" fill="black" />
+  <circle cx="292" cy="150" r="10" fill="black" />
+  <!-- 鼻子 -->
+  <ellipse cx="256" cy="180" rx="25" ry="15" fill="#F57C00" />
+  <!-- 嘴巴 -->
+  <path d="M226 200 Q256 230 286 200" stroke="#F57C00" stroke-width="5" fill="none" />
+  <!-- 前爪 -->
+  <ellipse cx="196" cy="320" rx="30" ry="20" fill="#FFB74D" transform="rotate(20 196 320)" />
+  <ellipse cx="316" cy="320" rx="30" ry="20" fill="#FFB74D" transform="rotate(-20 316 320)" />
+  <!-- 高光效果 -->
+  <circle cx="226" cy="144" r="5" fill="white" />
+  <circle cx="298" cy="144" r="5" fill="white" />
+  <ellipse cx="220" cy="250" rx="70" ry="40" fill="#FFB74D" opacity="0.6" />
+</svg> 

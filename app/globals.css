@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 宫崎骏风格的主色调 */
+  --primary-light: #7AA095;
+  --primary-main: #4D7C6F;
+  --primary-dark: #2C5A4D;
+
+  /* 暖米色辅助色 */
+  --secondary-light: #FAF5EB;
+  --secondary-main: #F0E6D2;
+  --secondary-dark: #E5D9C0;
+
+  /* 背景和前景色 */
+  --background: #FAF5EB;
+  --background-gradient: linear-gradient(180deg, #f9f5ec 0%, #ffffff 100%);
+  --foreground: #2C5A4D;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-gradient: var(--background-gradient);
   --color-foreground: var(--foreground);
+  --color-primary-light: var(--primary-light);
+  --color-primary-main: var(--primary-main);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-main: var(--secondary-main);
+  --color-secondary-dark: var(--secondary-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #2C5A4D;
+    --background-gradient: linear-gradient(180deg, #2C5A4D 0%, #1a3a30 100%);
+    --foreground: #FAF5EB;
   }
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
