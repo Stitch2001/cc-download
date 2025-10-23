@@ -9,6 +9,9 @@ interface DownloadCardProps {
   downloadLinks: DownloadLink
   version?: string
   comingSoon?: boolean
+  onTutorialClick?: () => void
+  showTutorialButton?: boolean
+  tutorialButtonText?: string
 }
 
 export default function DownloadCard({
@@ -16,7 +19,10 @@ export default function DownloadCard({
   icon,
   downloadLinks,
   version,
-  comingSoon = false
+  comingSoon = false,
+  onTutorialClick,
+  showTutorialButton = true,
+  tutorialButtonText = '安装教程'
 }: DownloadCardProps) {
   const [userOS, setUserOS] = useState<'windows' | 'mac' | 'linux'>('windows')
 
@@ -130,16 +136,19 @@ export default function DownloadCard({
           </div>
 
           {/* 安装教程按钮 */}
-          <button
-            className="h-12 px-6 rounded-full font-medium text-base transition-all hover:shadow-md border-2 hover:scale-105 active:scale-95 cursor-pointer"
-            style={{
-              backgroundColor: '#ffffff',
-              borderColor: 'var(--primary-main)',
-              color: 'var(--primary-main)'
-            }}
-          >
-            安装教程
-          </button>
+          {showTutorialButton && (
+            <button
+              onClick={onTutorialClick}
+              className="h-12 px-6 rounded-full font-medium text-base transition-all hover:shadow-md border-2 hover:scale-105 active:scale-95 cursor-pointer"
+              style={{
+                backgroundColor: '#ffffff',
+                borderColor: 'var(--primary-main)',
+                color: 'var(--primary-main)'
+              }}
+            >
+              {tutorialButtonText}
+            </button>
+          )}
         </div>
       </div>
     </div>

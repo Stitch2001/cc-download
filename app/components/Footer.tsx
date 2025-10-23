@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 const quickLinks = [
-  { label: '首页', href: '#' },
-  { label: '我的观察', href: '#experience' },
-  { label: '开发案例', href: '#tools' },
-  { label: '关于我', href: '#footer' }
+  { label: '首页', href: 'https://dishu.tech' },
+  { label: '我的观察', href: 'https://dishu.tech/#experience' },
+  { label: '开发案例', href: 'https://dishu.tech/#tools' },
+  { label: '关于我', href: 'https://dishu.tech/#footer' }
 ];
 
 const socialLinks = [
@@ -71,29 +71,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="flex gap-2 mb-3 relative">
-              {socialLinks.map((link, index) => (
-                <div key={index}>
-                  {link.name === "邮箱" ? (
-                    <Link
-                      href={link.url}
-                      className="text-gray-600 w-9 h-9 flex items-center justify-center rounded-full border border-[rgba(0,0,0,0.1)] transition-all duration-200 hover:transform hover:-translate-y-1 hover:text-primary-main hover:border-primary-main hover:bg-primary-light/10"
-                      aria-label={link.name}
-                    >
-                      {link.icon}
-                    </Link>
-                  ) : (
-                    <div
-                      className="text-gray-600 w-9 h-9 flex items-center justify-center rounded-full border border-[rgba(0,0,0,0.1)] transition-all duration-200 cursor-pointer hover:transform hover:-translate-y-1 hover:text-primary-main hover:border-primary-main hover:bg-primary-light/10"
-                    >
-                      {link.icon}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
 
-    
             <p className="text-xs text-gray-600 opacity-80">
               &copy; {currentYear} 地鼠。保留所有权利。
             </p>
