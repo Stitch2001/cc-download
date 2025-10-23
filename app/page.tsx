@@ -93,16 +93,17 @@ export default function Home() {
           <h1 className="text-3xl md:text-4xl font-semibold leading-10 tracking-tight my-4">
             软件安装
           </h1>
-          <button
-            className="px-6 py-3 rounded-full font-medium text-base transition-all hover:shadow-md hover:scale-105 active:scale-95 cursor-pointer mb-6 border-2"
-            style={{
-              backgroundColor: '#ffffff',
-              borderColor: '#4D7C6F',
-              color: '#4D7C6F'
-            }}
-          >
-            以下所有步骤遇到报错的通用解决方案点这里
-          </button>
+          <div className="mb-6">
+            <span
+              className="text-base font-medium text-[#4D7C6F] hover:text-[#2C5A4D] underline cursor-pointer transition-colors duration-200"
+              onClick={() => {
+                // 这里可以添加点击后的处理逻辑
+                console.log('通用解决方案被点击')
+              }}
+            >
+              以下所有步骤遇到报错的通用解决方案点这里
+            </span>
+          </div>
         </div>
       </div>
 
@@ -141,9 +142,7 @@ export default function Home() {
                   <iframe
                     src="//player.bilibili.com/player.html?isOutside=true&aid=115373240229117&bvid=BV1Mc48zEEoj&cid=33074121132&p=1"
                     scrolling="no"
-                    border="0"
-                    frameBorder="no"
-                    framespacing="0"
+                    frameBorder="0"
                     allowFullScreen={true}
                     className="w-full aspect-video"
                   />
@@ -198,9 +197,7 @@ export default function Home() {
                   <iframe
                     src="//player.bilibili.com/player.html?isOutside=true&aid=115373240229117&bvid=BV1Mc48zEEoj&cid=33074121132&p=1"
                     scrolling="no"
-                    border="0"
-                    frameBorder="no"
-                    framespacing="0"
+                    frameBorder="0"
                     allowFullScreen={true}
                     className="w-full aspect-video"
                   />
@@ -236,9 +233,7 @@ export default function Home() {
                   <iframe
                     src="//player.bilibili.com/player.html?isOutside=true&aid=115373240229117&bvid=BV1Mc48zEEoj&cid=33074121132&p=1"
                     scrolling="no"
-                    border="0"
-                    frameBorder="no"
-                    framespacing="0"
+                    frameBorder="0"
                     allowFullScreen={true}
                     className="w-full aspect-video"
                   />
@@ -473,9 +468,7 @@ export default function Home() {
                   <iframe
                     src="//player.bilibili.com/player.html?isOutside=true&aid=115373240229117&bvid=BV1Mc48zEEoj&cid=33074121132&p=1"
                     scrolling="no"
-                    border="0"
-                    frameBorder="no"
-                    framespacing="0"
+                    frameBorder="0"
                     allowFullScreen={true}
                     className="w-full aspect-video"
                   />
