@@ -110,7 +110,7 @@ const Navbar = ({ currentPage = 'software' }: { currentPage?: 'software' | 'game
                   className="w-6 h-6"
                 />
                 <span className="text-xl tracking-tight text-gray-900">
-                  Claude Code教学
+                  Claude Code基础教学
                 </span>
               </div>
             </div>

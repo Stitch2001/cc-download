@@ -115,7 +115,7 @@ export default function Home() {
           <div className="space-y-4">
             <div className="text-left">
               <p className="text-lg text-[#4D7C6F] font-medium">
-                第一步：下载VS Code，这款软件会帮助你阅读代码
+                <span className="font-bold">第一步：</span>下载VS Code，这款软件会帮助你阅读代码
               </p>
             </div>
             <DownloadCard
@@ -170,7 +170,7 @@ export default function Home() {
           <div className="space-y-4">
             <div className="text-left">
               <p className="text-lg text-[#4D7C6F] font-medium">
-                第二步：下载Node.js，这款软件是运行Claude Code的必要条件
+                <span className="font-bold">第二步：</span>下载Node.js，这款软件是运行Claude Code的必要条件
               </p>
             </div>
             <DownloadCard
@@ -210,7 +210,7 @@ export default function Home() {
           <div className="space-y-4">
             <div className="text-left">
               <p className="text-lg text-[#4D7C6F] font-medium">
-                第三步：下载Git，这款软件也是运行Claude Code的必要条件。MacOS用户可跳过。
+                <span className="font-bold">第三步：</span>下载Git，这款软件也是运行Claude Code的必要条件。MacOS用户可跳过。
               </p>
             </div>
             <DownloadCard
@@ -248,7 +248,7 @@ export default function Home() {
         <div className="mt-8 space-y-4">
           <div className="text-left">
             <p className="text-lg text-[#4D7C6F] font-medium">
-              第四步：从终端安装Claude Code
+              <span className="font-bold">第四步：</span>从终端安装Claude Code
             </p>
           </div>
           {commands.map((command, index) => {
@@ -262,7 +262,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="text-left">
                   <p className="text-lg text-[#4D7C6F] font-medium">
-                    第五步：寻找适合你的大模型API
+                    <span className="font-bold">第五步：</span>寻找适合你的大模型API
                   </p>
                 </div>
 
@@ -407,7 +407,7 @@ export default function Home() {
             {index === 1 && (
               <div className="text-left">
                 <p className="text-lg text-[#4D7C6F] font-medium">
-                  第六步：配置API_URL和API_KEY
+                  <span className="font-bold">第六步：</span>配置API_URL和API_KEY
                 </p>
               </div>
             )}
