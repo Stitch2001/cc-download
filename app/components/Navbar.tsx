@@ -10,7 +10,7 @@ const navItems: Array<{ label: string; href: string }> = [
   { label: '小程序搭建', href: '/miniprogram' }
 ];
 
-const Navbar = ({ currentPage }: { currentPage: 'software' | 'game' | 'personal' | 'miniprogram' }) => {
+const Navbar = ({ currentPage = 'software' }: { currentPage?: 'software' | 'game' | 'personal' | 'miniprogram' }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
